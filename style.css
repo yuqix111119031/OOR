@@ -63,7 +63,195 @@ body{
 .RedWord{     /*紅色分類方塊*/
    color: #E81D1D;
 }
+@media(min-width:0px) {
 
+   /* reset */
+   body,
+   h1,
+   ul {
+       margin: 0;
+   }
+
+   * {
+       box-sizing: border-box;
+   }
+
+   ul {
+       display: block;
+       padding-left: 0;
+   }
+
+   a {
+       text-decoration: none;
+   }
+
+   /* NavBar */
+   nav {
+       background: #eee;
+       box-shadow: 0px 1px 3px #00000088;
+       z-index: 5;
+       &::after {
+           content: "";
+           display: none;
+           clear: both;
+       }
+
+       h1 {
+           /* Logo */
+           float: left;
+           padding-left: 50px;
+           line-height: 50px;
+       }
+   }
+
+   /* 隱藏 checkbox */
+   input {
+       display: none;
+
+   }
+
+   input:checked~.menu {
+       max-height: 600px;
+       a{
+           display: none;
+       }
+       .div{
+           display: none;
+           padding-top: 100px;
+       }
+   }
+   /* 漢堡按鈕 */
+   label {
+       display: block;
+       float: right;
+       padding-right: 50px;
+       line-height: 50px;
+   }
+
+   .ham {
+       width: 30px;
+       vertical-align: middle;
+   }
+
+   /* 選單列 */
+   .menu {
+       max-height: 0;
+      overflow: hidden;
+   }
+
+   
+}
+
+
+@media(min-width:921px) {
+
+   body,
+   h1,
+   ul {
+       margin: 0;
+   }
+
+   * {
+       box-sizing: border-box;
+   }
+
+   ul {
+       display: block;
+       padding-left: 0;
+   }
+
+   a {
+       text-decoration: none;
+   }
+
+   /* NavBar */
+   nav {
+       background: #eee;
+       box-shadow: 0px 1px 3px #00000088;
+
+       &::after {
+           content: "";
+           display: block;
+           clear: both;
+       }
+
+       h1 {
+           /* Logo */
+           float: left;
+           padding-left: 50px;
+           line-height: 50px;
+       }
+   }
+
+   /* 漢堡按鈕 */
+   label {
+       display: none;
+   }
+
+   .ul-li {
+       display: inline-block;
+       list-style: none;
+       margin: 0 20px;
+       opacity: 0.9;
+       transition: 0.3s;
+   }
+
+   .ul-li:hover {
+       color: #E81D1D;
+       opacity: 1;
+       transform: scale(1.1);
+   }
+
+   .LOGIN_btn {
+       background-color: #E81D1D;
+       height: 50px;
+       width: 100px;
+       color: #F9F9F9;
+       border-radius: 10px;
+       border: 0;
+   }
+
+   .LOGIN_btn:hover {
+       background-color: white;
+       color: red;
+       border: 3px solid red;
+       opacity: 1;
+       transform: scale(1.1);
+       opacity: 0.9;
+       transition: 0.3s;
+   }
+
+   .naa {
+       color: #000;
+       text-decoration: none;
+       font-size: 25px;
+       font-style: normal;
+       font-weight: 800;
+       line-height: normal;
+       opacity: 0.9;
+       transition: 0.3s;
+   }
+
+   .naa:hover {
+       color: #E81D1D;
+       text-decoration: none;
+       font-size: 25px;
+       font-style: normal;
+       font-weight: 800;
+       line-height: normal;
+       opacity: 0.9;
+       transition: 0.3s;
+   }
+
+   .naa:visited,
+   .naa:link,
+   .naa:active {
+       text-decoration: none;
+   }
+.menu{
+   overflow: visible;
+}
+}
 /*圖片大小設定*/
 .ROCK_pic{
    height: 60px;
@@ -108,66 +296,6 @@ nav {
    margin-right: 20px;
 }
   
-.li {
-   color: #000000;
-   display: inline-block;
-   list-style: none;
-   margin: 0 20px; /*間距*/
-}
-  
-.li:hover {
-   color: #E81D1D;
-   opacity: 1;
-   transform: scale(1.1);
-   opacity: 0.9;
-   transition: 0.3s;
-}
-
-.naa {
-   color:#000;
-   text-decoration: none;
-   font-size: 25px;
-   font-style: normal;
-   font-weight: 900;
-   line-height: normal;
-   opacity: 0.9;
-   transition: 0.3s;
-}
-
-.naa:hover {
-   color: #E81D1D;
-   text-decoration: none;
-   font-size: 25px;
-   font-style: normal;
-   font-weight: 900;
-   line-height: normal;
-   opacity: 0.9;
-   transition: 0.3s;
-}
-
-.naa:visited,.naa:link,.naa:active {
-   text-decoration: none;
-}
-
-.LOGIN_btn{
-   background-color: #E81D1D;
-   height: 50px;
-   width: 100px;
-   color: #F9F9F9;
-   border-radius: 10px;
-   border: 0;
-   margin-left: 10px;
-}
-
-.LOGIN_btn:hover{
-   background-color: white; 
-   color: red;
-   border: 3px solid red;
-   opacity: 1;
-   transform: scale(1.1);
-   opacity: 0.9;
-   transition: 0.3s;
-}
 
 
 /*main*/
@@ -175,7 +303,7 @@ nav {
 .main_background{
    background-size: cover;
    background-attachment: fixed;
-   background-image:url(https://pbs.twimg.com/media/F99FuHybIAA4Kmd?format=jpg&name=medium);
+   background-image:url(https://id.pinterest.com/pin/426153183523697734/);
    background-position: 50% 50%;
    background-color: rgba(0,0,0, 0.7);
    background-blend-mode: multiply;
